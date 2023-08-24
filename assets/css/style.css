@@ -1,0 +1,333 @@
+@charset "utf-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* Force scrollbar */
+html {
+  overflow-y: scroll;
+}
+
+/* Align radios and text inputs with their label */
+
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+/* Hand cursor on clickable input elements */
+label,
+input[type="button"],
+input[type="submit"],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em {
+  font-style: italic;
+}
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup {
+  top: -0.7em;
+}
+sub {
+  bottom: -0.25em;
+}
+
+/* 1.2. Clear Fix
+   ========================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after {
+  clear: both;
+}
+.cf {
+  zoom: 1;
+}
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1360px;
+  width: 86%;
+  margin: 0 auto;
+}
+/*=================================
+  main styling starts here
+=================================*/
+
+/**************************************
+  weather section styling starts here
+***************************************/
+.weather-section {
+  height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1499346030926-9a72daac6c63?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80");
+  background-size: cover;
+}
+
+.weather-container {
+  padding: 30px 0;
+}
+
+.main-heading {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.search-form {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.search {
+  width: 20%;
+  padding: 10px 8px;
+  border: none;
+}
+
+.search-btn {
+  padding: 10px 8px;
+  border: none;
+  background-color: #3293d1;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.search-btn:hover {
+  background-color: #2874a3;
+}
+
+.sub-heading {
+  margin-top: 40px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.card-container {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card-container > li {
+  padding: 16px 1.5%;
+  margin: 0 2% 12px 0;
+  background-color: #fff;
+  color: #555;
+  box-shadow: 6px 8px 6px #999;
+}
+
+.card-container > li > div {
+  padding: 10px 0;
+  border-bottom: 1px solid #c2c2c2;
+}
+.card-container > li > div:last-child {
+  border-bottom: none;
+}
+
+.card-heading {
+  margin-right: 5%;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.date {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.temperature {
+  margin-top: 6px;
+}
+.temperature::after {
+  content: "\4f";
+  margin-left: 2px;
+  position: absolute;
+  font-size: 8px;
+}
+
+.forecast {
+  margin-top: 6px;
+  text-transform: capitalize;
+}
+
+.wind {
+  margin-top: 6px;
+}
+
+.percentage {
+}
+.percentage::after {
+  content: "\25";
+  font-size: 14px;
+  text-indent: 0;
+}
+
+/**************************************
+  weather section styling ends here
+***************************************/
+
+/*=================================
+  main styling ends here
+=================================*/
+/*media query starts*/
+/*media query for 995px starts here*/
+@media only screen and (max-width: 995px) {
+}
